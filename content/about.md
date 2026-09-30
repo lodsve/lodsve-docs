@@ -2,11 +2,6 @@
 title: "关于 Lodsve"
 description: "了解 Lodsve，联系维护者，并认识参与各个项目的贡献者。"
 url: /about/
-menu:
-  main:
-    identifier: about
-    name: 关于
-    weight: 50
 ---
 
 Lodsve 为 Java 项目的创建、开发与构建提供开源工具。从 Lodsve Boot 到 Maven、Gradle 脚手架与构建插件，希望让工程中的常见工作更容易复用。
