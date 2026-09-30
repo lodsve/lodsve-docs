@@ -1,6 +1,6 @@
 <header class="site-header">
   <div class="header-inner">
-    <a class="brand" href="{{ "/" | relURL }}" aria-label="Lodsve 首页"><img class="brand-logo" src="{{ "/images/lodsve-logo.png" | relURL }}" alt="Lodsve" width="320" height="200"></a>
+    <a class="brand" href="{{ "/" | relURL }}" aria-label="Lodsve 首页"><img class="brand-logo" src="{{ "/images/lodsve-logo.png" | relURL }}" alt="Lodsve" width="280" height="138"></a>
     <nav class="main-nav" aria-label="主导航">
       {{ range .Site.Menus.main }}<a href="{{ .URL | relURL }}"{{ if hasPrefix $.RelPermalink .URL }} class="active" aria-current="{{ if eq $.RelPermalink .URL }}page{{ else }}true{{ end }}"{{ end }}>{{ .Name }}</a>{{ end }}
     </nav>
