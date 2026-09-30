@@ -9,11 +9,10 @@
 }
 .footer-logo {
   display: block;
-  width: 136px;
-  height: 67px;
-  object-fit: contain;
-  object-position: left center;
-  margin-bottom: 4px;
+  width: 144px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 12px;
 }
 .site-header {
   height: 68px;
@@ -187,7 +186,10 @@ a:focus-visible, summary:focus-visible { outline: 3px solid var(--blue); outline
   .doc-grid { grid-template-columns: 1fr; }
   .doc-toc { margin-top: 30px; }
   .footer-inner { grid-template-columns: 1fr 1fr; gap: 28px; }
-  .footer-logo { width: 126px; height: 62px; }
+  .footer-logo {
+    width: 128px;
+    height: auto;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .project-card { transition: none; }
