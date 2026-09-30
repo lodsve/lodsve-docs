@@ -1,7 +1,7 @@
 baseURL: https://docs.lodsve.com/
 locale: zh-CN
 defaultContentLanguage: zh-cn
-title: Lodsve Boot
+title: Lodsve
 enableRobotsTXT: true
 enableGitInfo: true
 hasCJKLanguage: true
@@ -13,21 +13,22 @@ markup:
       unsafe: true
 menu:
   main:
-    - name: 快速开始
-      url: /getting-started/
+    - name: 项目
+      url: /projects/
       weight: 10
-    - name: 能力地图
-      url: /starters/
+    - name: 文档
+      url: /docs/
       weight: 20
-    - name: 组件文档
-      url: /components/
+    - name: 指南
+      url: /guides/
       weight: 30
-    - name: 示例工程
-      url: /examples/
+    - name: 社区
+      url: /community/
       weight: 40
 params:
-  description: 基于 Spring Boot 的 Java 开发套件，提供可组合的 Starter 与组件能力。
-  repository: https://github.com/lodsve/lodsve-boot
+  description: Lodsve 开源项目与文档，覆盖 Boot 应用组件、Maven 构建插件及 Maven、Gradle 项目脚手架。
+  repository: https://github.com/lodsve
+  docsRepository: https://github.com/lodsve/lodsve-docs
   javadoc: https://javadoc.lodsve.com
   mavenCentral: https://central.sonatype.com/
   version: 1.0.3

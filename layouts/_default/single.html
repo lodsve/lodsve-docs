@@ -2,10 +2,9 @@
 <div class="docs-shell">
   <aside class="docs-sidebar"><a class="back-home" href="{{ "/" | relURL }}">← 返回首页</a>{{ partial "sidebar.html" . }}</aside>
   <article class="doc-content">
-    <div class="eyebrow">{{ with .CurrentSection }}{{ .Title }}{{ end }}</div>
-    <h1>{{ .Title }}</h1>
-    {{ with .Params.description }}<p class="lead">{{ . }}</p>{{ end }}
+    {{ partial "doc-heading.html" . }}
     {{ .Content }}
   </article>
+  {{ partial "doc-toc.html" . }}
 </div>
 {{ end }}

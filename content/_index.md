@@ -1,8 +1,6 @@
 ---
-title: Lodsve Boot
-description: 基于 Spring Boot 的 Java 开发套件，提供可组合的 Starter 与组件能力。
+title: Lodsve
+description: Lodsve 开源项目与中文文档，覆盖 Boot 应用组件、Maven 构建插件及 Maven、Gradle 项目脚手架。
 ---
 
-Lodsve Boot 面向使用 Spring Boot 的 Java 团队，整理数据库、缓存、消息、文件存储、Web、校验和脚本等常用基础能力。
-
-从 [快速开始](/getting-started/) 开始，或直接浏览 [Starter 能力地图](/starters/)。
+从[项目目录](/projects/)认识各个项目，或到[文档中心](/docs/)查找使用说明。

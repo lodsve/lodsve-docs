@@ -1,4 +1,23 @@
-<div class="sidebar-group"><span class="sidebar-label">快速开始</span><a href="{{ "/getting-started/" | relURL }}">概览</a><a href="{{ "/getting-started/installation/" | relURL }}">安装与依赖</a><a href="{{ "/getting-started/first-project/" | relURL }}">第一个项目</a></div>
-<div class="sidebar-group"><span class="sidebar-label">理解项目</span><a href="{{ "/concepts/architecture/" | relURL }}">架构与模块</a><a href="{{ "/concepts/starter-component/" | relURL }}">Starter 与 Component</a></div>
-<div class="sidebar-group"><span class="sidebar-label">能力与组件</span><a href="{{ "/starters/" | relURL }}">Starter 能力地图</a><a href="{{ "/components/" | relURL }}">Component 目录</a></div>
-<div class="sidebar-group"><span class="sidebar-label">参考</span><a href="{{ "/examples/" | relURL }}">示例工程</a><a href="{{ "/reference/configuration/" | relURL }}">配置参考</a><a href="{{ "/reference/faq/" | relURL }}">常见问题</a></div>
+{{ $current := . }}
+{{ $project := partial "project-context.html" . }}
+<nav aria-label="文档导航">
+  <div class="sidebar-group"><span class="sidebar-label">Lodsve 项目</span>
+    {{ with .Site.GetPage "/projects" }}{{ range .Pages.ByWeight }}
+    <a href="{{ .RelPermalink }}"{{ if and $project (eq $project.RelPermalink .RelPermalink) }} class="active"{{ end }}{{ if eq $current.RelPermalink .RelPermalink }} aria-current="page"{{ end }}>{{ .Params.shortTitle | default .Title }}</a>
+    {{ end }}{{ end }}
+  </div>
+  {{ with $project }}
+  <div class="sidebar-group"><span class="sidebar-label">{{ .Params.shortTitle | default .Title }}</span>
+    <a href="{{ .RelPermalink }}"{{ if eq $current.RelPermalink .RelPermalink }} aria-current="page"{{ end }}>项目介绍</a>
+    {{ if eq .Params.project "lodsve-boot" }}
+      {{ range slice "/getting-started" "/getting-started/installation" "/getting-started/first-project" "/getting-started/version-management" "/concepts/architecture" "/concepts/starter-component" "/starters" "/components" "/examples" "/reference/configuration" "/reference/faq" }}
+        {{ with $current.Site.GetPage . }}<a href="{{ .RelPermalink }}"{{ if eq $current.RelPermalink .RelPermalink }} aria-current="page"{{ end }}>{{ .Title }}</a>{{ end }}
+      {{ end }}
+    {{ else }}
+      {{ range .Pages.ByWeight }}<a href="{{ .RelPermalink }}"{{ if eq $current.RelPermalink .RelPermalink }} aria-current="page"{{ end }}>{{ .Title }}</a>{{ end }}
+    {{ end }}
+  </div>
+  {{ else }}
+  <div class="sidebar-group"><span class="sidebar-label">开始探索</span>{{ range slice "/docs" "/guides" "/guides/create-project" "/community" }}{{ with $current.Site.GetPage . }}<a href="{{ .RelPermalink }}"{{ if eq $current.RelPermalink .RelPermalink }} aria-current="page"{{ end }}>{{ .Title }}</a>{{ end }}{{ end }}</div>
+  {{ end }}
+</nav>

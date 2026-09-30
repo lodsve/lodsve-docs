@@ -1,0 +1,3 @@
+<nav class="breadcrumbs" aria-label="面包屑"><a href="{{ "/docs/" | relURL }}">文档中心</a>{{ with partial "project-context.html" . }}<span aria-hidden="true">/</span><a href="{{ .RelPermalink }}">{{ .Params.shortTitle | default .Title }}</a>{{ end }}</nav>
+<h1>{{ .Title }}</h1>
+{{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}

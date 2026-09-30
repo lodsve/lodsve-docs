@@ -1,6 +1,6 @@
-# Lodsve Boot 文档站
+# Lodsve 文档站
 
-这是 Lodsve Boot 的中文 Hugo 文档源代码仓库。
+这是 Lodsve 组织的中文 Hugo 文档源代码仓库，涵盖 Lodsve Boot、Maven Plugins、Maven Archetype 与 Gradle Archetype Plugin。
 
 ## 本地预览
 

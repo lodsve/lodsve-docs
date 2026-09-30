@@ -1,0 +1,9 @@
+{{ $project := false }}
+{{ with .Params.project }}
+  {{ $project = $.Site.GetPage (printf "/projects/%s" .) }}
+{{ else }}
+  {{ if in (slice "getting-started" "concepts" "starters" "components" "examples" "reference" "contributing") .Section }}
+    {{ $project = .Site.GetPage "/projects/lodsve-boot" }}
+  {{ end }}
+{{ end }}
+{{ return $project }}

@@ -1,0 +1,6 @@
+<article class="project-card">
+  <span class="card-kicker">{{ .Params.kicker }}</span>
+  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  <p>{{ .Description }}</p>
+  <div class="project-card-links"><a href="{{ .RelPermalink }}">阅读文档 →</a>{{ with .Params.repository }}<a href="{{ . }}">GitHub ↗</a>{{ end }}</div>
+</article>
