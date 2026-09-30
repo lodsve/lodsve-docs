@@ -25,6 +25,9 @@ menu:
     - name: 社区
       url: /community/
       weight: 40
+    - name: 关于
+      url: /about/
+      weight: 50
 params:
   description: Lodsve 开源项目与文档，覆盖 Boot 应用组件、Maven 构建插件及 Maven、Gradle 项目脚手架。
   repository: https://github.com/lodsve

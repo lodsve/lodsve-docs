@@ -145,6 +145,20 @@ a:focus-visible, summary:focus-visible { outline: 3px solid var(--blue); outline
 .doc-toc li { margin: 9px 0; color: var(--muted); overflow-wrap: anywhere; }
 .source-link { display: block; margin-top: 16px; color: var(--blue); }
 .docs-project { margin-top: 36px; }
+.about-contact { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 24px 0 28px; }
+.about-contact-card { display: flex; flex-direction: column; gap: 4px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 8px; background: linear-gradient(145deg, #fff, #f5fafc); transition: border-color .18s ease, box-shadow .18s ease; }
+.about-contact-card:hover { border-color: #8abbd7; box-shadow: 0 8px 22px #006fae0c; }
+.about-contact-label { color: var(--blue); font: 700 11px ui-monospace, monospace; letter-spacing: .1em; text-transform: uppercase; }
+.about-contact-card strong { font-size: 17px; overflow-wrap: anywhere; }
+.about-contact-card > span:last-child { color: var(--muted); font-size: 13px; }
+.about-projects { display: grid; gap: 16px; margin-top: 24px; }
+.about-project { min-width: 0; padding: 22px 24px 24px; border: 1px solid var(--line); border-radius: 8px; background: linear-gradient(145deg, #fff 65%, #f5fafc); }
+.about-project-heading { min-width: 0; display: flex; align-items: start; justify-content: space-between; gap: 20px; }
+.about-project-heading h3 { margin: 5px 0 4px; font-size: 21px; }
+.about-project-heading p { margin: 0; color: var(--muted); font-size: 14px; }
+.about-project-heading > a { flex: 0 0 auto; color: var(--blue); font-size: 13px; font-weight: 700; }
+.contributor-wall { display: block; min-width: 0; margin-top: 18px; padding: 14px; overflow-x: auto; border-top: 1px solid var(--line); background: #f8fbfc; }
+.contributor-wall img { display: block; max-width: 100%; height: auto; min-width: 480px; }
 .footer-inner { display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr; gap: 36px; padding-top: 44px; padding-bottom: 44px; }
 .footer-brand strong { font-size: 23px; }
 .footer-group { display: flex; flex-direction: column; gap: 8px; }
@@ -190,6 +204,12 @@ a:focus-visible, summary:focus-visible { outline: 3px solid var(--blue); outline
     width: 128px;
     height: auto;
   }
+  .about-contact { grid-template-columns: 1fr; }
+  .about-project { padding: 20px; }
+  .about-project-heading { display: block; }
+  .about-project-heading > a { display: inline-block; margin-top: 12px; }
+  .contributor-wall { margin-top: 16px; padding: 10px; }
+  .contributor-wall img { min-width: 430px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .project-card { transition: none; }
