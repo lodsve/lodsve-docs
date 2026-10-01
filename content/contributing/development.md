@@ -4,7 +4,7 @@ description: 本地构建、代码风格和文档贡献约定。
 weight: 10
 ---
 
-主项目使用 Maven Wrapper、JDK 17、Checkstyle 和许可证头检查。提交代码前执行受影响模块测试，并保持 Java 文件使用 UTF-8、LF 和 4 空格缩进。
+主项目使用 Maven Wrapper、JDK 21、Checkstyle 和许可证头检查。提交代码前执行受影响模块测试，并保持 Java 文件使用 UTF-8、LF 和 4 空格缩进。
 
 文档站使用 Hugo：
 

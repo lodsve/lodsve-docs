@@ -1,12 +1,12 @@
 ---
 title: 安装与依赖
-description: 配置 JDK 17 和 Maven，并通过 BOM 管理 Lodsve Boot 版本。
+description: 配置 JDK 21 和 Maven，并通过 BOM 管理 Lodsve Boot 版本。
 weight: 10
 ---
 
 ## 环境要求
 
-- JDK 17；
+- JDK 21；
 - Maven 3.3 或更高版本；
 - Spring Boot 2.6.x 兼容的应用。
 

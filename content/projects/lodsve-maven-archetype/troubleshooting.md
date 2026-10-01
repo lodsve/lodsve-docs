@@ -30,6 +30,6 @@ API / Server / Client 基础包应保持一致；先安装共享 API，再构建
 
 ## 容器运行版本不匹配
 
-模板的 Dockerfile 基线使用 JDK 11 镜像，应按生成工程的实际 JDK 要求更换。生成工程中的源码、POM 与镜像版本需要一并核对。
+模板的 Dockerfile 基线使用 Java 21 运行时镜像，应按生成工程的实际 JDK 要求更换。生成工程中的源码、POM 与镜像版本需要一并核对。
 
 [README 与源码基线](https://github.com/lodsve/lodsve-maven-archetype/tree/d1450a5767509f1605ce9797a3ac2cd3e5758dae)

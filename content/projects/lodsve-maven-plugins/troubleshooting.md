@@ -28,4 +28,4 @@ weight: 30
 ./mvnw clean install
 ```
 
-插件源码的构建配置使用 JDK 11，质量检查以根 POM 与 `tools/` 配置为准。[根 POM](https://github.com/lodsve/lodsve-maven-plugins/blob/e1a9195c89fd5a106a9616bc27f31b93399e6611/pom.xml) 是版本与构建规则的依据。
+插件源码的当前构建配置使用 JDK 21，质量检查以根 POM 与 `tools/` 配置为准。[根 POM](https://github.com/lodsve/lodsve-maven-plugins/blob/e1a9195c89fd5a106a9616bc27f31b93399e6611/pom.xml) 是版本与构建规则的依据；历史发布版本可能使用更低版本的 JDK。

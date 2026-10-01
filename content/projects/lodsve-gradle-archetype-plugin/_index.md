@@ -28,7 +28,7 @@ cascade: {"project": "lodsve-gradle-archetype-plugin"}
 
 文档对照源码 `aca7077`，`gradle.properties` 中版本为 `1.0.1-RELEASE`。该版本可通过 Maven Central 的 `com.lodsve:lodsve-gradle-archetype-plugin` 安装，见[快速开始](/projects/lodsve-gradle-archetype-plugin/getting-started/)。Plugin Portal 的版本列表独立管理，不能把 Central 版本直接当作 Portal 插件版本。
 
-源码仓库的 Wrapper 使用 Gradle `5.1.1`，源码兼容目标为 Java 8；这不是对所有较新 Gradle / JDK 组合的兼容承诺。生成器工程和最终生成的应用可有各自的构建环境，应分别确认。
+源码仓库的 Wrapper 使用 Gradle `8.14.3`，构建工具链使用 JDK 21，源码兼容目标仍为 Java 8；这不是对所有较新 Gradle / JDK 组合的兼容承诺。生成器工程和最终生成的应用可有各自的构建环境，应分别确认。
 
 ## 源码依据
 

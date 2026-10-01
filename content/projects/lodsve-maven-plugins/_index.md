@@ -20,7 +20,7 @@ cascade: {"project": "lodsve-maven-plugins"}
 
 ## 版本与环境
 
-本文以源码版本 `1.0.3` 为基线，两个模块的 groupId 均为 `com.lodsve.maven.plugins`。父 POM 的构建 profile 使用 JDK 11，Maven API 依赖为 `3.6.3`；这些信息描述插件自身，不代表 Lodsve Boot 应用的运行要求。
+本文以源码版本 `1.0.3` 为基线，两个模块的 groupId 均为 `com.lodsve.maven.plugins`。当前父 POM 的构建 profile 使用 JDK 21，Maven API 依赖为 `3.6.3`；这些信息描述插件自身，不代表 Lodsve Boot 应用的运行要求。
 
 ## 源码依据
 

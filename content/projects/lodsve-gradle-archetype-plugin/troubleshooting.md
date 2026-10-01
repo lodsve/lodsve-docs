@@ -32,6 +32,6 @@ README 特别列出了 Properties 中 `https\://...` 这类转义内容的已知
 
 ## Gradle 或 JDK 不兼容
 
-源码仓库使用 Gradle `5.1.1` Wrapper 与 Java 8 源码目标。选择相互兼容的 Gradle / JDK 运行生成器；不要把生成器的环境要求直接套到最终 Boot 应用上。版本升级需单独验证插件任务、模板替换和生成工程构建。
+源码仓库使用 Gradle `8.14.3` Wrapper 和 JDK 21 toolchain，源码目标仍为 Java 8。选择相互兼容的 Gradle / JDK 运行生成器；不要把生成器的环境要求直接套到最终 Boot 应用上。版本升级需单独验证插件任务、模板替换和生成工程构建。
 
 [README 已知问题](https://github.com/lodsve/lodsve-gradle-archetype-plugin/blob/aca7077141a0b2201d069bd2925532e26ee26edc/README.md) · [源码](https://github.com/lodsve/lodsve-gradle-archetype-plugin/tree/aca7077141a0b2201d069bd2925532e26ee26edc/src/main/groovy/com/lodsve/gradle/archetype)
