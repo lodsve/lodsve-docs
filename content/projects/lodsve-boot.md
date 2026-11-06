@@ -28,4 +28,4 @@ Lodsve Boot 将数据库、缓存、消息、文件存储和 Web 等常用基础
 - [源码与 README](https://github.com/lodsve/lodsve-boot)
 - [问题反馈](https://github.com/lodsve/lodsve-boot/issues)
 
-Boot 的版本要求与脚手架、插件自身的构建环境分别管理；请结合具体版本选择 JDK 和构建工具。
+当前源码基于 Spring Boot `4.1.2`（Maven 坐标）和 JDK 21。Boot 的版本要求与脚手架、插件自身的构建环境分别管理；请结合具体版本选择 JDK 和构建工具。

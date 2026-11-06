@@ -30,7 +30,7 @@ cascade: {"project": "lodsve-maven-archetype"}
 
 文档结构与参数依据仓库 `d1450a5`，其根 POM 的 `revision` 为 `1.0.4-SNAPSHOT`。Maven Central 可查到 Quickstart、MyBatis、Nacos 的 `1.0.3` 发布版；RPC 模块请先按 [RPC 指南](/projects/lodsve-maven-archetype/rpc/)从源码安装，不能假设它们也发布了同一个版本。
 
-`archetypeVersion` 选择模板版本，`bootVersion` 选择应用依赖的 Lodsve Boot 版本，`version` 则是新业务工程的版本。三者不能互换。模板包含历史依赖与配置，用新的 Boot 版本生成后还需要核对依赖坐标和 API。
+`archetypeVersion` 选择模板版本，`bootVersion` 选择应用依赖的 Lodsve Boot 版本，`version` 则是新业务工程的版本。三者不能互换。当前模板面向 Lodsve Boot 1.0.4-SNAPSHOT / Spring Boot 4.1.2；生成工程使用 Jakarta API 和 Springdoc OpenAPI 3，不再兼容 Boot 2/3 的 `javax.*` 与 Springfox 注解。
 
 ## 源码依据
 

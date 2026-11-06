@@ -6,7 +6,7 @@ weight: 10
 
 ## 准备环境与版本
 
-安装 Maven 和 JDK 21 构建环境。在终端设置 `LODSVE_BOOT_VERSION` 为项目已选定的版本，例如 `export LODSVE_BOOT_VERSION=1.0.3`。这里仅说明版本如何传入；生成应用的运行时 JDK 仍应按所选 Boot 版本和业务依赖核对。
+安装 Maven 和 JDK 21 构建环境。在终端设置 `LODSVE_BOOT_VERSION` 为项目已选定的版本，例如 `export LODSVE_BOOT_VERSION=1.0.4-SNAPSHOT`。这里仅说明版本如何传入；生成应用的运行时 JDK 仍应按所选 Boot 版本和业务依赖核对。
 
 模板坐标为 `com.lodsve.archetype:lodsve-archetype-quickstart`，命令在新工程的父目录执行。
 
