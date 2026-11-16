@@ -4,3 +4,13 @@ description: "从应用能力到工程脚手架，按你的开发场景选择 Lo
 ---
 
 Lodsve Boot 提供应用组件，Maven 与 Gradle 脚手架负责初始化工程，Maven 插件扩展源码生成与资源打包。各项目独立维护，使用前请阅读对应的版本与环境说明。
+
+## 技术架构
+
+[![Lodsve 各项目的技术架构与协作关系](/images/lodsve-architecture.svg)](/images/lodsve-architecture.svg)
+
+图中实线表示工程生成、运行时依赖和组件装配；虚线表示版本管理关系。点击图可查看矢量原图。
+
+Maven Archetype 提供 6 种 Lodsve Boot Maven 项目模板；Gradle Archetype Plugin 读取本地模板生成工程，是否接入 Boot 由模板决定。应用通过 Starter 选择运行时能力。Maven Plugins 扩展 Maven 源码生成与资源打包阶段，Boot 源码构建当前配置了 JavaTemplate 插件。文档站统一介绍各项目并发布到 GitHub Pages。
+
+Lodsve Boot 的内部模块分层见[架构与模块](/concepts/architecture/)。
