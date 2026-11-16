@@ -19,5 +19,19 @@
   {{ partial "header.html" . }}
   <main id="main-content" class="site-main">{{ block "main" . }}{{ end }}</main>
   {{ partial "footer.html" . }}
+  <dialog class="architecture-viewer" data-architecture-viewer aria-label="架构图预览">
+    <div class="architecture-viewer__toolbar">
+      <span class="architecture-viewer__title" data-architecture-viewer-title>架构图</span>
+      <button class="architecture-viewer__control" type="button" data-architecture-zoom-out aria-label="缩小">−</button>
+      <button class="architecture-viewer__control architecture-viewer__fit" type="button" data-architecture-fit>适配窗口</button>
+      <button class="architecture-viewer__control" type="button" data-architecture-zoom-in aria-label="放大">+</button>
+      <button class="architecture-viewer__control architecture-viewer__close" type="button" data-architecture-close>关闭</button>
+    </div>
+    <div class="architecture-viewer__stage" data-architecture-viewer-stage>
+      <img class="architecture-viewer__image" data-architecture-viewer-image alt="">
+    </div>
+  </dialog>
+  {{ $script := resources.Get "js/site.js" | minify | fingerprint }}
+  <script src="{{ $script.RelPermalink }}" defer></script>
 </body>
 </html>

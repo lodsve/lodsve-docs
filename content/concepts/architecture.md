@@ -6,13 +6,14 @@ weight: 10
 
 ## 组件关系图
 
-<div class="architecture-scroll">
-  <a href="/images/lodsve-boot-architecture.svg">
+<figure class="architecture-figure">
+  <button class="architecture-preview" type="button" data-architecture-image data-architecture-title="Lodsve Boot 组件架构" aria-haspopup="dialog" aria-label="放大查看 Lodsve Boot 组件架构图">
     <img src="/images/lodsve-boot-architecture.svg" alt="Lodsve Boot Starter、AutoConfiguration、Component 与集成依赖关系">
-  </a>
-</div>
+  </button>
+  <figcaption>点击图片可在覆盖层中查看并缩放。</figcaption>
+</figure>
 
-图中蓝色连线表示 Starter POM 对公共自动配置模块的直接依赖；绿色连线表示功能配置与 Component 或集成能力的映射。第三方依赖由 Starter 或 Component 引入，不一定经自动配置模块传递。可左右滚动查看全部模块，点击图可查看矢量原图。
+图中蓝色连线表示 Starter POM 对公共自动配置模块的直接依赖；绿色连线表示功能配置与 Component 或集成能力的映射。第三方依赖由 Starter 或 Component 引入，不一定经自动配置模块传递。图片会完整适配页面宽度，点击后可在覆盖层中缩放查看细节。
 
 ## 运行时依赖链
 
