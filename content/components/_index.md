@@ -9,6 +9,7 @@ Component 页面面向需要深入定制、排查行为或开发扩展的用户�
 | Component | 主要职责 | 对应 Starter |
 | --- | --- | --- |
 | filesystem | 对象存储适配和文件生命周期 | filesystem |
+| mongodb | MongoDB 客户端路由和多数据源切换 | mongodb |
 | mybatis | Repository、分页、逻辑删除和 SQL | mybatis |
 | redis | Redis 数据源和序列化增强 | redis |
 | rdbms | 动态数据源、连接池和数据库整合 | rdbms |

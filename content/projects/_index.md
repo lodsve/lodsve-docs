@@ -16,6 +16,6 @@ Lodsve Boot 提供应用组件，Maven 与 Gradle 脚手架负责初始化工程
 
 图中实线表示工程生成、运行时依赖和组件装配；虚线表示版本管理关系。图片会完整适配页面宽度，点击后可在覆盖层中缩放查看细节。
 
-Maven Archetype 提供 6 种 Lodsve Boot Maven 项目模板；Gradle Archetype Plugin 读取本地模板生成工程，是否接入 Boot 由模板决定。应用通过 Starter 选择运行时能力。Maven Plugins 扩展 Maven 源码生成与资源打包阶段，Boot 源码构建当前配置了 JavaTemplate 插件。文档站统一介绍各项目并发布到 GitHub Pages。
+Maven Archetype 提供 7 种 Lodsve Boot Maven 项目模板；Gradle Archetype Plugin 内置 MongoDB Boot 模板，也支持读取本地模板。应用通过 Starter 选择运行时能力，MongoDB Starter 可装配具名数据源路由。Maven Plugins 扩展 Maven 源码生成与资源打包阶段，Boot 源码构建当前配置了 JavaTemplate 插件。文档站统一介绍各项目并发布到 GitHub Pages。
 
 Lodsve Boot 的内部模块分层见[架构与模块](/concepts/architecture/)。

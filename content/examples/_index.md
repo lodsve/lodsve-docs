@@ -11,6 +11,7 @@ weight: 40
 | 示例 | 位置 | 依赖服务 |
 | --- | --- | --- |
 | Filesystem | `lodsve-boot-example-filesystem` | OSS、S3 或 Minio |
+| MongoDB | `lodsve-boot-example-mongodb` | MongoDB；默认库与 archive 具名数据源 |
 | MyBatis | `lodsve-boot-example-mybatis` | MySQL 等关系型数据库 |
 | Redis | `lodsve-boot-example-redis` | Redis |
 | RabbitMQ | `lodsve-boot-example-rabbitmq` | RabbitMQ |

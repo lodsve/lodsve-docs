@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1680" height="1080" viewBox="0 0 1680 1080" role="img" aria-labelledby="diagram-title diagram-description">
 <title id="diagram-title">Lodsve 工程整体技术架构</title>
-<desc id="diagram-description">Maven Archetype 和 Gradle Archetype Plugin 生成应用；业务应用选择 Lodsve Boot Starter；Maven Plugins 扩展源码生成和资源打包；Boot 内部由自动配置、组件、核心模块和可选 Actuator 组成；examples 用于验证；Hugo 文档站发布到 GitHub Pages。</desc>
+<desc id="diagram-description">Maven Archetype 和 Gradle Archetype Plugin 提供应用模板；业务应用选择 Lodsve Boot Starter；MongoDB Starter 通过自动配置和动态客户端组件支持具名数据源；Maven Plugins 扩展源码生成和资源打包；Boot 内部由自动配置、组件、核心模块和可选 Actuator 组成；examples 用于验证；Hugo 文档站发布到 GitHub Pages。</desc>
 <defs>
 <marker id="arrow-blue" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#5473ad" /></marker>
 <marker id="arrow-green" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#3d8069" /></marker>
@@ -31,15 +31,15 @@
 <text x="80" y="190" class="section">01  工程生成</text>
 <rect x="80" y="220" width="400" height="190" rx="14" fill="#ffffff" stroke="#9ab8a9" stroke-width="2" />
 <text x="105" y="258" class="card-title">Maven Archetype</text>
-<text x="105" y="292" class="body">6 个 Lodsve Boot 工程模板</text>
-<text x="105" y="322" class="small">Quickstart · MyBatis · Nacos</text>
+<text x="105" y="292" class="body">7 个 Lodsve Boot 工程模板</text>
+<text x="105" y="322" class="small">Quickstart · MyBatis · MongoDB · Nacos</text>
 <text x="105" y="350" class="small">RPC API · Server · Client</text>
 <text x="105" y="385" class="small">输出 Maven POM、源码与配置</text>
 <rect x="80" y="435" width="400" height="190" rx="14" fill="#ffffff" stroke="#9ab8a9" stroke-width="2" />
 <text x="105" y="473" class="card-title">Gradle Archetype Plugin</text>
-<text x="105" y="507" class="body">读取用户维护的本地模板</text>
+<text x="105" y="507" class="body">MongoDB 模板与用户维护的模板</text>
 <text x="105" y="537" class="small">替换文件内容和路径变量</text>
-<text x="105" y="565" class="small">不内置应用模板；可生成 Boot 应用</text>
+<text x="105" y="565" class="small">内置 MongoDB Boot 模板；也可用本地模板</text>
 <text x="105" y="600" class="small">输出到模板工程的 generated/ 目录</text>
 <rect x="80" y="655" width="400" height="110" rx="12" fill="#e7eff9" stroke="#bdcce0" stroke-width="1.5" />
 <text x="105" y="692" class="card-title">生成器职责</text>
@@ -71,18 +71,18 @@
 <text x="670" y="557" class="tiny" text-anchor="middle">构建约定与版本管理</text>
 <rect x="650" y="615" width="370" height="65" rx="12" fill="#e0eaff" stroke="#7695cf" stroke-width="2" />
 <text x="835" y="643" class="card-title" text-anchor="middle">Starter</text>
-<text x="835" y="666" class="tiny" text-anchor="middle">应用侧依赖入口</text>
+<text x="835" y="666" class="tiny" text-anchor="middle">依赖入口 · 含 MongoDB Starter</text>
 <rect x="535" y="720" width="280" height="78" rx="12" fill="#ffffff" stroke="#aebed6" stroke-width="2" />
 <text x="675" y="751" class="card-title" text-anchor="middle">AutoConfiguration</text>
 <text x="675" y="778" class="tiny" text-anchor="middle">imports + 条件化 Bean 注册</text>
 <rect x="855" y="720" width="280" height="78" rx="12" fill="#ffffff" stroke="#aebed6" stroke-width="2" />
 <text x="995" y="751" class="card-title" text-anchor="middle">Components</text>
-<text x="995" y="778" class="tiny" text-anchor="middle">可复用功能实现与适配器</text>
+<text x="995" y="778" class="tiny" text-anchor="middle">可复用实现 · MongoDB 动态路由</text>
 
 <rect x="650" y="830" width="370" height="55" rx="12" fill="#e8eef5" stroke="#aebdce" stroke-width="2" />
 <text x="835" y="864" class="small" text-anchor="middle">lodsve-boot · 共用基础类型与工具</text>
 <rect x="585" y="900" width="500" height="48" rx="11" fill="#f1f6fa" stroke="#aebdce" stroke-width="2" />
-<text x="835" y="930" class="small" text-anchor="middle">Spring Boot / Spring Cloud + 数据库、Redis、消息、对象存储</text>
+<text x="835" y="930" class="small" text-anchor="middle">Spring Boot / Cloud + SQL · MongoDB · Redis · 消息 · 对象存储</text>
 
 
 <text x="1200" y="595" class="section">04  扩展与验证</text>

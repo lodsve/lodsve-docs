@@ -13,6 +13,7 @@ weight: 5
 | [Countdown 示例](/examples/configuration/countdown/) | 带中文注释的 YAML 示例。 |
 | [加密配置示例](/examples/configuration/encryption/) | 带中文注释的 YAML 示例。 |
 | [File System 示例](/examples/configuration/filesystem/) | 带中文注释的 YAML 示例。 |
+| [MongoDB 示例](/examples/configuration/mongodb/) | 默认连接和具名多数据源配置。 |
 | [MyBatis 示例](/examples/configuration/mybatis/) | 带中文注释的 YAML 示例。 |
 | [RabbitMQ 示例](/examples/configuration/rabbitmq/) | 带中文注释的 YAML 示例。 |
 | [Redis 示例](/examples/configuration/redis/) | 带中文注释的 YAML 示例。 |

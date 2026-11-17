@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1960" viewBox="0 0 1600 1960" role="img" aria-labelledby="diagram-title diagram-description">
 <title id="diagram-title">Lodsve Boot 堆叠式组件架构图</title>
-<desc id="diagram-description">图按应用层、Starter 层、公共自动配置层、Component 与外部集成层、Core 和基础设施从上至下堆叠。四组能力卡片分别映射 Web API、数据存储、消息事件、云与运行时功能。版本管理、示例工程和 Actuator 作为辅助模块呈现。</desc>
+<desc id="diagram-description">图按应用层、Starter 层、公共自动配置层、Component 与外部集成层、Core 和基础设施从上至下堆叠。四组能力卡片分别映射 Web API、数据存储、消息事件、云与运行时功能；数据存储组包含 MongoDB Starter、具名数据源自动配置和动态客户端 Component。版本管理、示例工程和 Actuator 作为辅助模块呈现。</desc>
 <defs>
 <marker id="arrow-blue" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#5473ad" /></marker>
 <marker id="arrow-amber" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#b47b31" /></marker>
@@ -27,7 +27,7 @@
 <text x="820" y="301" class="tiny" fill="#5473ad">选择依赖</text>
 <rect x="60" y="340" width="1480" height="390" rx="18" fill="#edf3fc" stroke="#9aafd1" stroke-width="2" />
 <text x="90" y="380" class="section">01  Starter 层</text>
-<text x="340" y="380" class="section-note">16 个应用入口 · 按场景选用 · 所有 Starter 均依赖公共自动配置模块</text>
+<text x="340" y="380" class="section-note">17 个应用入口 · 按场景选用 · 所有 Starter 均依赖公共自动配置模块</text>
 <rect x="80" y="420" width="345" height="285" rx="13" fill="#ffffff" stroke="#a9bce0" stroke-width="1.7" />
 <text x="102" y="454" class="card-title">Web 与 API</text>
 <circle cx="111" cy="490" r="13" fill="#3561a0" />
@@ -59,30 +59,33 @@
 <circle cx="476" cy="607" r="13" fill="#3561a0" />
 <text x="476" y="611" class="key" text-anchor="middle">09</text>
 <text x="499" y="612" class="small">lodsve-boot-starter-filesystem</text>
+<circle cx="476" cy="646" r="13" fill="#3561a0" />
+<text x="476" y="650" class="key" text-anchor="middle">10</text>
+<text x="499" y="651" class="small">lodsve-boot-starter-mongodb</text>
 <rect x="810" y="420" width="345" height="285" rx="13" fill="#ffffff" stroke="#a9bce0" stroke-width="1.7" />
 <text x="832" y="454" class="card-title">消息与事件</text>
 <circle cx="841" cy="490" r="13" fill="#3561a0" />
-<text x="841" y="494" class="key" text-anchor="middle">10</text>
+<text x="841" y="494" class="key" text-anchor="middle">11</text>
 <text x="864" y="495" class="small">lodsve-boot-starter-rabbitmq</text>
 <circle cx="841" cy="529" r="13" fill="#3561a0" />
-<text x="841" y="533" class="key" text-anchor="middle">11</text>
+<text x="841" y="533" class="key" text-anchor="middle">12</text>
 <text x="864" y="534" class="small">lodsve-boot-starter-rocketmq</text>
 <circle cx="841" cy="568" r="13" fill="#3561a0" />
-<text x="841" y="572" class="key" text-anchor="middle">12</text>
+<text x="841" y="572" class="key" text-anchor="middle">13</text>
 <text x="864" y="573" class="small">lodsve-boot-starter-event</text>
 <circle cx="841" cy="607" r="13" fill="#3561a0" />
-<text x="841" y="611" class="key" text-anchor="middle">13</text>
+<text x="841" y="611" class="key" text-anchor="middle">14</text>
 <text x="864" y="612" class="small">lodsve-boot-starter-countdown</text>
 <rect x="1175" y="420" width="345" height="285" rx="13" fill="#ffffff" stroke="#a9bce0" stroke-width="1.7" />
 <text x="1197" y="454" class="card-title">云与运行时</text>
 <circle cx="1206" cy="490" r="13" fill="#3561a0" />
-<text x="1206" y="494" class="key" text-anchor="middle">14</text>
+<text x="1206" y="494" class="key" text-anchor="middle">15</text>
 <text x="1229" y="495" class="small">lodsve-boot-starter-openfeign</text>
 <circle cx="1206" cy="529" r="13" fill="#3561a0" />
-<text x="1206" y="533" class="key" text-anchor="middle">15</text>
+<text x="1206" y="533" class="key" text-anchor="middle">16</text>
 <text x="1229" y="534" class="small">lodsve-boot-starter-nacos</text>
 <circle cx="1206" cy="568" r="13" fill="#3561a0" />
-<text x="1206" y="572" class="key" text-anchor="middle">16</text>
+<text x="1206" y="572" class="key" text-anchor="middle">17</text>
 <text x="1229" y="573" class="small">lodsve-boot-starter-script</text>
 <path d="M800 732 L800 762" fill="none" stroke="#5473ad" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-blue)" />
 <g transform="translate(0 10)">
@@ -121,30 +124,33 @@
 <circle cx="476" cy="1042" r="13" fill="#7458a3" />
 <text x="476" y="1046" class="key" text-anchor="middle">09</text>
 <text x="499" y="1047" class="small">FileSystemAutoConfiguration</text>
+<circle cx="476" cy="1081" r="13" fill="#7458a3" />
+<text x="476" y="1085" class="key" text-anchor="middle">10</text>
+<text x="499" y="1086" class="small">MongoDataSourceAutoConfiguration</text>
 <rect x="810" y="855" width="345" height="285" rx="13" fill="#ffffff" stroke="#c5badd" stroke-width="1.7" />
 <text x="832" y="889" class="card-title">消息与事件</text>
 <circle cx="841" cy="925" r="13" fill="#7458a3" />
-<text x="841" y="929" class="key" text-anchor="middle">10</text>
+<text x="841" y="929" class="key" text-anchor="middle">11</text>
 <text x="864" y="930" class="small">RabbitAutoConfiguration</text>
 <circle cx="841" cy="964" r="13" fill="#7458a3" />
-<text x="841" y="968" class="key" text-anchor="middle">11</text>
+<text x="841" y="968" class="key" text-anchor="middle">12</text>
 <text x="864" y="969" class="small">RocketMqAutoConfiguration</text>
 <circle cx="841" cy="1003" r="13" fill="#7458a3" />
-<text x="841" y="1007" class="key" text-anchor="middle">12</text>
+<text x="841" y="1007" class="key" text-anchor="middle">13</text>
 <text x="864" y="1008" class="small">EventAutoConfiguration</text>
 <circle cx="841" cy="1042" r="13" fill="#7458a3" />
-<text x="841" y="1046" class="key" text-anchor="middle">13</text>
+<text x="841" y="1046" class="key" text-anchor="middle">14</text>
 <text x="864" y="1047" class="small">CountdownAutoConfiguration</text>
 <rect x="1175" y="855" width="345" height="285" rx="13" fill="#ffffff" stroke="#c5badd" stroke-width="1.7" />
 <text x="1197" y="889" class="card-title">云与运行时</text>
 <circle cx="1206" cy="925" r="13" fill="#7458a3" />
-<text x="1206" y="929" class="key" text-anchor="middle">14</text>
+<text x="1206" y="929" class="key" text-anchor="middle">15</text>
 <text x="1229" y="930" class="small">OpenFeignAutoConfiguration †</text>
 <circle cx="1206" cy="964" r="13" fill="#7458a3" />
-<text x="1206" y="968" class="key" text-anchor="middle">15</text>
+<text x="1206" y="968" class="key" text-anchor="middle">16</text>
 <text x="1229" y="969" class="small">无 Lodsve Nacos 配置类</text>
 <circle cx="1206" cy="1003" r="13" fill="#7458a3" />
-<text x="1206" y="1007" class="key" text-anchor="middle">16</text>
+<text x="1206" y="1007" class="key" text-anchor="middle">17</text>
 <text x="1229" y="1008" class="small">ScriptAutoConfiguration</text>
 </g>
 <path d="M800 1192 L800 1222" fill="none" stroke="#5473ad" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-blue)" />
@@ -183,30 +189,33 @@
 <circle cx="476" cy="1472" r="13" fill="#408264" />
 <text x="476" y="1476" class="key" text-anchor="middle">09</text>
 <text x="499" y="1477" class="small">component-filesystem · 存储 SDK</text>
+<circle cx="476" cy="1511" r="13" fill="#408264" />
+<text x="476" y="1515" class="key" text-anchor="middle">10</text>
+<text x="499" y="1516" class="small">component-mongodb · 动态客户端路由</text>
 <rect x="810" y="1285" width="345" height="285" rx="13" fill="#ffffff" stroke="#a9cbb7" stroke-width="1.7" />
 <text x="832" y="1319" class="card-title">消息与事件</text>
 <circle cx="841" cy="1355" r="13" fill="#408264" />
-<text x="841" y="1359" class="key" text-anchor="middle">10</text>
+<text x="841" y="1359" class="key" text-anchor="middle">11</text>
 <text x="864" y="1360" class="small">Spring Boot AMQP</text>
 <circle cx="841" cy="1394" r="13" fill="#408264" />
-<text x="841" y="1398" class="key" text-anchor="middle">11</text>
+<text x="841" y="1398" class="key" text-anchor="middle">12</text>
 <text x="864" y="1399" class="small">RocketMQ Spring Starter</text>
 <circle cx="841" cy="1433" r="13" fill="#408264" />
-<text x="841" y="1437" class="key" text-anchor="middle">12</text>
+<text x="841" y="1437" class="key" text-anchor="middle">13</text>
 <text x="864" y="1438" class="small">component-event</text>
 <circle cx="841" cy="1472" r="13" fill="#408264" />
-<text x="841" y="1476" class="key" text-anchor="middle">13</text>
+<text x="841" y="1476" class="key" text-anchor="middle">14</text>
 <text x="864" y="1477" class="small">component-countdown · Redis</text>
 <rect x="1175" y="1285" width="345" height="285" rx="13" fill="#ffffff" stroke="#a9cbb7" stroke-width="1.7" />
 <text x="1197" y="1319" class="card-title">云与运行时</text>
 <circle cx="1206" cy="1355" r="13" fill="#408264" />
-<text x="1206" y="1359" class="key" text-anchor="middle">14</text>
+<text x="1206" y="1359" class="key" text-anchor="middle">15</text>
 <text x="1229" y="1360" class="small">OpenFeign · LoadBalancer · Nacos</text>
 <circle cx="1206" cy="1394" r="13" fill="#408264" />
-<text x="1206" y="1398" class="key" text-anchor="middle">15</text>
+<text x="1206" y="1398" class="key" text-anchor="middle">16</text>
 <text x="1229" y="1399" class="small">Nacos Config · Bootstrap</text>
 <circle cx="1206" cy="1433" r="13" fill="#408264" />
-<text x="1206" y="1437" class="key" text-anchor="middle">16</text>
+<text x="1206" y="1437" class="key" text-anchor="middle">17</text>
 <text x="1229" y="1438" class="small">component-script · JVM engines</text>
 <text x="90" y="1608" class="tiny">† OpenFeignAutoConfiguration 源码类未列入 imports；component-openfeign-client 由 RPC API 示例单独依赖。Nacos 配置由 Spring Cloud Alibaba 提供。</text>
 </g>
@@ -214,7 +223,7 @@
 <g transform="translate(0 30)">
 <rect x="60" y="1660" width="920" height="120" rx="14" fill="#e8eef5" stroke="#aebdce" stroke-width="2" />
 <text x="88" y="1697" class="card-title">04  Core 基础层</text>
-<text x="88" y="1728" class="small">lodsve-boot 提供共享基础类型与工具；公共自动配置和 10 个功能 Component 依赖它。</text>
+<text x="88" y="1728" class="small">lodsve-boot 提供共享基础类型与工具；公共自动配置和 11 个功能 Component 依赖它。</text>
 <text x="88" y="1755" class="tiny">openfeign-client 是独立 RPC DTO / Result 模块，不在 Starter 的直接依赖中。</text>
 <rect x="1010" y="1660" width="530" height="120" rx="14" fill="#f4f1fb" stroke="#c3b7dc" stroke-width="2" />
 <text x="1038" y="1697" class="card-title">Actuator 可选扩展</text>
@@ -225,6 +234,6 @@
 <g transform="translate(0 50)">
 <rect x="60" y="1800" width="1480" height="65" rx="14" fill="#ffffff" stroke="#b8c5d4" stroke-width="2" />
 <text x="88" y="1828" class="card-title">05  Spring Boot / Spring Cloud 与基础设施</text>
-<text x="88" y="1852" class="small">SQL 数据库 · Redis · RabbitMQ / RocketMQ · Nacos · OSS / S3 / COS / MinIO</text>
+<text x="88" y="1852" class="small">SQL 数据库 · MongoDB · Redis · RabbitMQ / RocketMQ · Nacos · OSS / S3 / COS / MinIO</text>
 </g>
 </svg>

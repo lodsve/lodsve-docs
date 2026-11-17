@@ -13,6 +13,7 @@ Lodsve Boot 的配置按模块拆分。选择模块后，可以查看该模块�
 | [Countdown 配置](/reference/configuration/countdown/) | `lodsve.countdown` | 完整配置项与说明。 |
 | [Encryption 配置](/reference/configuration/encryption/) | `lodsve.encryption` | 完整配置项与说明。 |
 | [File System 配置](/reference/configuration/filesystem/) | `lodsve.file-system` | 完整配置项与说明。 |
+| [MongoDB 配置](/reference/configuration/mongodb/) | `lodsve.mongo`、`spring.mongodb` | 默认连接和具名数据源配置。 |
 | [MyBatis 配置](/reference/configuration/mybatis/) | `lodsve.mybatis` | 完整配置项与说明。 |
 | [RabbitMQ 配置](/reference/configuration/rabbitmq/) | `lodsve.rabbit` | 完整配置项与说明。 |
 | [Redis 配置](/reference/configuration/redis/) | `lodsve.redis` | 完整配置项与说明。 |

@@ -8,7 +8,7 @@ weight: 10
 
 <figure class="architecture-figure">
   <button class="architecture-preview" type="button" data-architecture-image data-architecture-title="Lodsve Boot 组件架构" aria-haspopup="dialog" aria-label="放大查看 Lodsve Boot 组件架构图">
-    <img src="/images/lodsve-boot-architecture.svg" alt="Lodsve Boot Starter、AutoConfiguration、Component 与集成依赖关系">
+    <img src="/images/lodsve-boot-architecture.svg" alt="Lodsve Boot Starter、MongoDB 多数据源自动配置、Component 与基础设施依赖关系">
   </button>
   <figcaption>点击图片可在覆盖层中查看并缩放。</figcaption>
 </figure>
@@ -31,7 +31,7 @@ weight: 10
 | `lodsve-boot-parent` | 统一 Maven 编译、插件和质量检查约定 | Boot 多模块工程的父 POM |
 | `lodsve-boot` | 提供基础类型、异常、工具及共享能力 | 被自动配置和多数功能 Component 使用 |
 | `lodsve-boot-autoconfigure` | 提供共用及功能自动配置注册 | 依赖 Core；以 optional 依赖声明多种 Component |
-| `lodsve-boot-component-*` | 承载 Web、数据库、Redis、文件、校验等具体实现 | 通常由相应 Starter 组合，也可单独使用；RPC Client 模块由 RPC API 显式依赖 |
+| `lodsve-boot-component-*` | 承载 Web、SQL / MongoDB 数据访问、Redis、文件、校验等具体实现 | 通常由相应 Starter 组合，也可单独使用；RPC Client 模块由 RPC API 显式依赖 |
 | `lodsve-boot-starter-*` | 提供面向应用的依赖入口 | 引入公共自动配置，并按能力组合 Component 或集成库 |
 | `lodsve-boot-actuator*` | 提供 Lodsve 专属 Actuator 端点 | 由应用显式加入，不属于普通 Starter 链 |
 | `lodsve-boot-examples` | 展示各 Starter 和外部基础设施用法 | 通过 `include-examples` Profile 加入 Reactor |
