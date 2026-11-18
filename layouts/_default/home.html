@@ -4,32 +4,32 @@
   <div class="hero-inner">
     <div class="hero-copy">
       <div class="eyebrow">LODSVE · OPEN SOURCE JAVA TOOLKIT</div>
-      <h1>从项目起步，<br><em>到应用交付。</em></h1>
-      <p>为 Java 开发准备一套可组合的工具。以 Lodsve Boot 连接应用能力，用脚手架统一工程结构，让构建插件处理重复工作。</p>
-      <div class="hero-actions"><a class="button button-primary" href="{{ "/guides/" | relURL }}">选择你的起点 →</a><a class="button button-secondary" href="{{ "/projects/" | relURL }}">探索开源项目</a></div>
+      <h1>{{ T "home_headline" }}<br><em>{{ T "home_headline_end" }}</em></h1>
+      <p>{{ T "home_intro" }}</p>
+      <div class="hero-actions"><a class="button button-primary" href="{{ "guides/" | relLangURL }}">{{ T "home_start" }}</a><a class="button button-secondary" href="{{ "projects/" | relLangURL }}">{{ T "home_projects" }}</a></div>
     </div>
-    <div class="ecosystem" aria-label="Lodsve 开发流程">
-      <div class="ecosystem-label">你的 Java 工程</div>
-      <a class="ecosystem-row" href="{{ "/guides/create-project/" | relURL }}"><span class="flow-number">01</span><div><strong>创建工程</strong><span>Maven Archetype / Gradle Archetype</span></div><span aria-hidden="true">↗</span></a>
-      <a class="ecosystem-row" href="{{ "/projects/lodsve-boot/" | relURL }}"><span class="flow-number">02</span><div><strong>组合应用能力</strong><span>Lodsve Boot · Starter · Component</span></div><span aria-hidden="true">↗</span></a>
-      <a class="ecosystem-row" href="{{ "/projects/lodsve-maven-plugins/" | relURL }}"><span class="flow-number">03</span><div><strong>生成与打包</strong><span>Java Template / Shade Transformers</span></div><span aria-hidden="true">↗</span></a>
-      <p>从工程模板到应用组件，各司其职，按需使用。</p>
+    <div class="ecosystem" aria-label="{{ T "home_workflow" }}">
+      <div class="ecosystem-label">{{ T "home_your_project" }}</div>
+      <a class="ecosystem-row" href="{{ "guides/create-project/" | relLangURL }}"><span class="flow-number">01</span><div><strong>{{ T "home_create" }}</strong><span>Maven Archetype / Gradle Archetype</span></div><span aria-hidden="true">↗</span></a>
+      <a class="ecosystem-row" href="{{ "projects/lodsve-boot/" | relLangURL }}"><span class="flow-number">02</span><div><strong>{{ T "home_connect" }}</strong><span>Lodsve Boot · Starter · Component</span></div><span aria-hidden="true">↗</span></a>
+      <a class="ecosystem-row" href="{{ "projects/lodsve-maven-plugins/" | relLangURL }}"><span class="flow-number">03</span><div><strong>{{ T "home_build" }}</strong><span>Java Template / Shade Transformers</span></div><span aria-hidden="true">↗</span></a>
+      <p>{{ T "home_workflow_caption" }}</p>
     </div>
   </div>
 </section>
 <section class="home-section" aria-labelledby="projects-title">
-  <div class="section-heading"><div><div class="eyebrow">PROJECTS</div><h2 id="projects-title">认识 Lodsve 项目</h2></div><a href="{{ "/docs/" | relURL }}">进入文档中心 →</a></div>
+  <div class="section-heading"><div><div class="eyebrow">PROJECTS</div><h2 id="projects-title">{{ T "home_project_heading" }}</h2></div><a href="{{ "docs/" | relLangURL }}">{{ T "home_docs" }}</a></div>
   <div class="project-grid">{{ with .Site.GetPage "/projects" }}{{ range .Pages.ByWeight }}{{ partial "project-card.html" . }}{{ end }}{{ end }}</div>
 </section>
 <section class="home-section tinted" aria-labelledby="start-title">
-  <div class="section-heading"><div><div class="eyebrow">GET STARTED</div><h2 id="start-title">从你正在做的事开始</h2></div></div>
+  <div class="section-heading"><div><div class="eyebrow">GET STARTED</div><h2 id="start-title">{{ T "home_start_heading" }}</h2></div></div>
   <div class="steps">
-    <a class="step" href="{{ "/projects/lodsve-maven-archetype/quickstart/" | relURL }}"><span>MAVEN</span><h3>创建一个应用</h3><p>从 Quickstart 开始，再选择 MyBatis、Nacos 或 RPC 模板。</p><span>查看生成指南 →</span></a>
-    <a class="step" href="{{ "/projects/lodsve-gradle-archetype-plugin/getting-started/" | relURL }}"><span>GRADLE</span><h3>复用团队模板</h3><p>将本地模板中的包名、坐标与配置替换成新工程的参数。</p><span>使用 Gradle 脚手架 →</span></a>
-    <a class="step" href="{{ "/getting-started/" | relURL }}"><span>LODSVE BOOT</span><h3>接入已有项目</h3><p>理解依赖管理，按需引入数据库、缓存和 Web 等能力。</p><span>阅读 Boot 指南 →</span></a>
+    <a class="step" href="{{ "projects/lodsve-maven-archetype/quickstart/" | relLangURL }}"><span>MAVEN</span><h3>{{ T "home_maven_title" }}</h3><p>{{ T "home_maven_intro" }}</p><span>{{ T "home_maven_link" }}</span></a>
+    <a class="step" href="{{ "projects/lodsve-gradle-archetype-plugin/getting-started/" | relLangURL }}"><span>GRADLE</span><h3>{{ T "home_gradle_title" }}</h3><p>{{ T "home_gradle_intro" }}</p><span>{{ T "home_gradle_link" }}</span></a>
+    <a class="step" href="{{ "getting-started/" | relLangURL }}"><span>LODSVE BOOT</span><h3>{{ T "home_boot_title" }}</h3><p>{{ T "home_boot_intro" }}</p><span>{{ T "home_boot_link" }}</span></a>
   </div>
 </section>
 <section class="home-section">
-  <div class="split-callout"><div><div class="eyebrow">OPEN SOURCE</div><h2>从使用者，<br>成为共同建设者。</h2><p>在项目仓库反馈问题、改进模板或补充使用文档。每个项目都有独立的源码和问题反馈入口。</p><a class="text-link" href="{{ "/community/" | relURL }}">参与 Lodsve →</a></div><div class="callout-list"><div><b>01</b><a href="{{ "/projects/" | relURL }}">找到适合的项目与文档</a></div><div><b>02</b><a href="{{ "/community/" | relURL }}">提供环境信息与复现步骤</a></div><div><b>03</b><a href="{{ .Site.Params.docsRepository }}">通过 Pull Request 改进文档 ↗</a></div></div></div>
+  <div class="split-callout"><div><div class="eyebrow">OPEN SOURCE</div><h2>{{ T "home_contribute_headline" }}{{ with T "home_contribute_headline_end" }}<br>{{ . }}{{ end }}</h2><p>{{ T "home_contribute_intro" }}</p><a class="text-link" href="{{ "community/" | relLangURL }}">{{ T "home_contribute_link" }}</a></div><div class="callout-list"><div><b>01</b><a href="{{ "projects/" | relLangURL }}">{{ T "home_find_project" }}</a></div><div><b>02</b><a href="{{ "community/" | relLangURL }}">{{ T "home_report_issue" }}</a></div><div><b>03</b><a href="{{ .Site.Params.docsRepository }}">{{ T "home_improve_docs" }}</a></div></div></div>
 </section>
 {{ end }}

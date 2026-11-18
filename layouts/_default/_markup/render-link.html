@@ -1,0 +1,9 @@
+{{- $href := .Destination -}}
+{{- $url := urls.Parse $href -}}
+{{- if and (not $url.Host) (not $url.Scheme) (hasPrefix $url.Path "/") -}}
+  {{- with .Page.Site.GetPage $url.Path -}}
+    {{- $href = printf "%s%s" .RelPermalink (strings.TrimPrefix $url.Path $href) -}}
+  {{- end -}}
+{{- end -}}
+<a href="{{ $href }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text }}</a>
+{{- /* Preserve the spacing around Markdown inline links. */ -}}

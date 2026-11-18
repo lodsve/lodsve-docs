@@ -1,14 +1,14 @@
 {{ $current := . }}
 {{ $project := partial "project-context.html" . }}
-<nav aria-label="文档导航">
-  <div class="sidebar-group"><span class="sidebar-label">Lodsve 项目</span>
+<nav aria-label="{{ T "doc_nav" }}">
+  <div class="sidebar-group"><span class="sidebar-label">{{ T "project_list" }}</span>
     {{ with .Site.GetPage "/projects" }}{{ range .Pages.ByWeight }}
     <a href="{{ .RelPermalink }}"{{ if and $project (eq $project.RelPermalink .RelPermalink) }} class="active"{{ end }}{{ if eq $current.RelPermalink .RelPermalink }} aria-current="page"{{ end }}>{{ .Params.shortTitle | default .Title }}</a>
     {{ end }}{{ end }}
   </div>
   {{ with $project }}
   <div class="sidebar-group"><span class="sidebar-label">{{ .Params.shortTitle | default .Title }}</span>
-    <a href="{{ .RelPermalink }}"{{ if eq $current.RelPermalink .RelPermalink }} aria-current="page"{{ end }}>项目介绍</a>
+    <a href="{{ .RelPermalink }}"{{ if eq $current.RelPermalink .RelPermalink }} aria-current="page"{{ end }}>{{ T "project_intro" }}</a>
     {{ if eq .Params.project "lodsve-boot" }}
       {{ range slice "/getting-started" "/getting-started/installation" "/getting-started/first-project" "/getting-started/version-management" "/concepts/architecture" "/concepts/starter-component" "/starters" "/components" "/examples" "/reference/configuration" "/reference/faq" }}
         {{ with $current.Site.GetPage . }}<a href="{{ .RelPermalink }}"{{ if eq $current.RelPermalink .RelPermalink }} aria-current="page"{{ end }}>{{ .Title }}</a>{{ end }}
@@ -18,6 +18,6 @@
     {{ end }}
   </div>
   {{ else }}
-  <div class="sidebar-group"><span class="sidebar-label">开始探索</span>{{ range slice "/docs" "/guides" "/guides/create-project" "/community" }}{{ with $current.Site.GetPage . }}<a href="{{ .RelPermalink }}"{{ if eq $current.RelPermalink .RelPermalink }} aria-current="page"{{ end }}>{{ .Title }}</a>{{ end }}{{ end }}</div>
+  <div class="sidebar-group"><span class="sidebar-label">{{ T "start_exploring" }}</span>{{ range slice "/docs" "/guides" "/guides/create-project" "/community" }}{{ with $current.Site.GetPage . }}<a href="{{ .RelPermalink }}"{{ if eq $current.RelPermalink .RelPermalink }} aria-current="page"{{ end }}>{{ .Title }}</a>{{ end }}{{ end }}</div>
   {{ end }}
 </nav>

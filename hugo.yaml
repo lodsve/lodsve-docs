@@ -1,10 +1,23 @@
 baseURL: https://docs.lodsve.com/
-locale: zh-CN
 defaultContentLanguage: zh-cn
+defaultContentLanguageInSubdir: false
 title: Lodsve
 enableRobotsTXT: true
 enableGitInfo: true
-hasCJKLanguage: true
+languages:
+  zh-cn:
+    locale: zh-CN
+    label: 简体中文
+    weight: 1
+    hasCJKLanguage: true
+    params:
+      description: Lodsve 开源项目与文档，覆盖 Boot 应用组件、Maven 构建插件及 Maven、Gradle 项目脚手架。
+  en:
+    locale: en
+    label: English
+    weight: 2
+    params:
+      description: Documentation for Lodsve Boot components, Maven build plugins, and Maven and Gradle project templates.
 markup:
   highlight:
     noClasses: false
@@ -14,22 +27,26 @@ markup:
 menu:
   main:
     - name: 项目
-      url: /projects/
+      identifier: projects
+      pageRef: /projects
       weight: 10
     - name: 文档
-      url: /docs/
+      identifier: docs
+      pageRef: /docs
       weight: 20
     - name: 指南
-      url: /guides/
+      identifier: guides
+      pageRef: /guides
       weight: 30
     - name: 社区
-      url: /community/
+      identifier: community
+      pageRef: /community
       weight: 40
     - name: 关于
-      url: /about/
+      identifier: about
+      pageRef: /about
       weight: 50
 params:
-  description: Lodsve 开源项目与文档，覆盖 Boot 应用组件、Maven 构建插件及 Maven、Gradle 项目脚手架。
   repository: https://github.com/lodsve
   docsRepository: https://github.com/lodsve/lodsve-docs
   javadoc: https://javadoc.lodsve.com

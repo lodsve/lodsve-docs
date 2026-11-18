@@ -1,10 +1,10 @@
 {{ define "main" }}
 <div class="docs-shell">
-  <aside class="docs-sidebar"><a class="back-home" href="{{ "/" | relURL }}">← 返回首页</a>{{ partial "sidebar.html" . }}</aside>
+  {{ partial "doc-sidebar.html" . }}
+  {{ partial "doc-toc.html" . }}
   <article class="doc-content">
     {{ partial "doc-heading.html" . }}
     {{ .Content }}
   </article>
-  {{ partial "doc-toc.html" . }}
 </div>
 {{ end }}

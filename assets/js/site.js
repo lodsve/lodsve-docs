@@ -1,3 +1,15 @@
+document.querySelectorAll("[data-nav-toggle]").forEach((button) => {
+  const panel = document.getElementById(button.getAttribute("aria-controls"));
+  panel.classList.add("nav-collapsed");
+
+  button.addEventListener("click", () => {
+    const expanded = button.getAttribute("aria-expanded") === "true";
+    button.setAttribute("aria-expanded", String(!expanded));
+    panel.classList.toggle("nav-collapsed", expanded);
+  });
+});
+document.documentElement.classList.add("nav-ready");
+
 (() => {
   const triggers = document.querySelectorAll("[data-architecture-image]");
   const viewer = document.querySelector("[data-architecture-viewer]");

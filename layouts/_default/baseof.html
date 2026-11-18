@@ -1,31 +1,37 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="{{ .Language.Locale }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ .Description | default .Site.Params.description }}">
-  <title>{{ if not .IsHome }}{{ .Title }} · {{ end }}{{ .Site.Title }} 文档</title>
+  <title>{{ if not .IsHome }}{{ .Title }} · {{ end }}{{ T "site_title" }}</title>
   <link rel="icon" type="image/png" sizes="32x32" href="{{ "/favicon.png" | relURL }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon.png" | relURL }}">
   <meta name="theme-color" content="#006fae">
   <link rel="canonical" href="{{ .Permalink }}">
+  {{ range .AllTranslations }}
+  <link rel="alternate" hreflang="{{ .Language.Locale }}" href="{{ .Permalink }}">
+  {{ if eq .Language.Lang "zh-cn" }}
+  <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+  {{ end }}
+  {{ end }}
   {{ $style := resources.Get "css/site.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
   {{ $organization := resources.Get "css/organization.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $organization.RelPermalink }}">
 </head>
 <body>
-  <a class="skip-link" href="#main-content">跳转到正文</a>
+  <a class="skip-link" href="#main-content">{{ T "skip_to_content" }}</a>
   {{ partial "header.html" . }}
   <main id="main-content" class="site-main">{{ block "main" . }}{{ end }}</main>
   {{ partial "footer.html" . }}
-  <dialog class="architecture-viewer" data-architecture-viewer aria-label="架构图预览">
+  <dialog class="architecture-viewer" data-architecture-viewer aria-label="{{ T "diagram_preview" }}">
     <div class="architecture-viewer__toolbar">
-      <span class="architecture-viewer__title" data-architecture-viewer-title>架构图</span>
-      <button class="architecture-viewer__control" type="button" data-architecture-zoom-out aria-label="缩小">−</button>
-      <button class="architecture-viewer__control architecture-viewer__fit" type="button" data-architecture-fit>适配窗口</button>
-      <button class="architecture-viewer__control" type="button" data-architecture-zoom-in aria-label="放大">+</button>
-      <button class="architecture-viewer__control architecture-viewer__close" type="button" data-architecture-close>关闭</button>
+      <span class="architecture-viewer__title" data-architecture-viewer-title>{{ T "diagram" }}</span>
+      <button class="architecture-viewer__control" type="button" data-architecture-zoom-out aria-label="{{ T "zoom_out" }}">−</button>
+      <button class="architecture-viewer__control architecture-viewer__fit" type="button" data-architecture-fit>{{ T "fit_to_window" }}</button>
+      <button class="architecture-viewer__control" type="button" data-architecture-zoom-in aria-label="{{ T "zoom_in" }}">+</button>
+      <button class="architecture-viewer__control architecture-viewer__close" type="button" data-architecture-close>{{ T "close" }}</button>
     </div>
     <div class="architecture-viewer__stage" data-architecture-viewer-stage>
       <img class="architecture-viewer__image" data-architecture-viewer-image alt="">

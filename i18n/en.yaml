@@ -1,0 +1,71 @@
+site_title: Lodsve Documentation
+skip_to_content: Skip to content
+home: Lodsve home
+navigation: Main navigation
+navigation_toggle: Menu
+switch_language: Change language
+projects: Projects
+docs: Docs
+guides: Guides
+community: Community
+about: About
+back_home: ← Home
+all_projects: ← All projects
+doc_center: Documentation
+user_guides: User guides
+breadcrumbs: Breadcrumbs
+doc_nav: Documentation navigation
+project_list: Lodsve projects
+project_intro: Project overview
+start_exploring: Explore
+contents: On this page
+page_links: Page links
+project_source: Project source ↗
+edit_page: Edit this page ↗
+read_docs: Read the docs
+footer_description: Reusable tools for starting, developing, and building Java projects.
+footer_maintainer: Maintained by the Lodsve open source community
+footer_projects: Open source projects
+footer_resources: Documentation
+footer_examples: Boot example projects
+footer_configuration: Boot configuration reference
+footer_community: Community
+footer_github: GitHub organization ↗
+footer_source: Documentation source ↗
+footer_contribute: Feedback and contributions
+diagram_preview: Architecture diagram preview
+diagram: Architecture diagram
+zoom_out: Zoom out
+fit_to_window: Fit to window
+zoom_in: Zoom in
+close: Close
+home_headline: From project setup
+home_headline_end: to application delivery.
+home_intro: A set of tools you can combine for Java development. Use Lodsve Boot to add application features, project templates to standardize structure, and build plugins to automate repetitive work.
+home_start: Find your starting point →
+home_projects: Explore the projects
+home_workflow: Lodsve development workflow
+home_your_project: Your Java project
+home_create: Create a project
+home_connect: Add application features
+home_build: Generate and package
+home_workflow_caption: Pick the templates, components, and plugins your project needs.
+home_project_heading: Explore Lodsve projects
+home_docs: Browse documentation →
+home_start_heading: Find a guide for your task
+home_maven_title: Create an application
+home_maven_intro: Start with Quickstart, or pick a MyBatis, Nacos, or RPC template.
+home_maven_link: View the generation guide →
+home_gradle_title: Reuse a team template
+home_gradle_intro: Replace package names, coordinates, and configuration in a local template with values for your new project.
+home_gradle_link: Use the Gradle plugin →
+home_boot_title: Extend an existing project
+home_boot_intro: Learn how dependency management works and add database, caching, or web features as needed.
+home_boot_link: Read the Boot guide →
+home_contribute_headline: From reader
+home_contribute_headline_end: to contributor.
+home_contribute_intro: Report issues, improve templates, or update the docs. Each project has its own source repository and issue tracker.
+home_contribute_link: Get involved →
+home_find_project: Find the project and its documentation
+home_report_issue: Share your environment and reproduction steps
+home_improve_docs: Improve the docs with a pull request ↗

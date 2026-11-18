@@ -1,0 +1,71 @@
+site_title: Lodsve 文档
+skip_to_content: 跳转到正文
+home: Lodsve 首页
+navigation: 主导航
+navigation_toggle: 菜单
+switch_language: 切换语言
+projects: 项目
+docs: 文档
+guides: 指南
+community: 社区
+about: 关于
+back_home: ← 返回首页
+all_projects: ← 全部项目
+doc_center: 文档中心
+user_guides: 使用指南
+breadcrumbs: 面包屑
+doc_nav: 文档导航
+project_list: Lodsve 项目
+project_intro: 项目介绍
+start_exploring: 开始探索
+contents: 本页目录
+page_links: 页面链接
+project_source: 项目源码 ↗
+edit_page: 编辑此页 ↗
+read_docs: 阅读文档
+footer_description: 让 Java 工程的起步、开发与构建更容易复用。
+footer_maintainer: 由 Lodsve 开源社区维护
+footer_projects: 开源项目
+footer_resources: 文档资源
+footer_examples: Boot 示例工程
+footer_configuration: Boot 配置参考
+footer_community: 参与社区
+footer_github: GitHub 组织 ↗
+footer_source: 文档源码 ↗
+footer_contribute: 反馈与贡献
+diagram_preview: 架构图预览
+diagram: 架构图
+zoom_out: 缩小
+fit_to_window: 适配窗口
+zoom_in: 放大
+close: 关闭
+home_headline: 从项目起步，
+home_headline_end: 到应用交付。
+home_intro: 为 Java 开发准备一套可组合的工具。以 Lodsve Boot 连接应用能力，用脚手架统一工程结构，让构建插件处理重复工作。
+home_start: 选择你的起点 →
+home_projects: 探索开源项目
+home_workflow: Lodsve 开发流程
+home_your_project: 你的 Java 工程
+home_create: 创建工程
+home_connect: 组合应用能力
+home_build: 生成与打包
+home_workflow_caption: 从工程模板到应用组件，各司其职，按需使用。
+home_project_heading: 认识 Lodsve 项目
+home_docs: 进入文档中心 →
+home_start_heading: 从你正在做的事开始
+home_maven_title: 创建一个应用
+home_maven_intro: 从 Quickstart 开始，再选择 MyBatis、Nacos 或 RPC 模板。
+home_maven_link: 查看生成指南 →
+home_gradle_title: 复用团队模板
+home_gradle_intro: 将本地模板中的包名、坐标与配置替换成新工程的参数。
+home_gradle_link: 使用 Gradle 脚手架 →
+home_boot_title: 接入已有项目
+home_boot_intro: 理解依赖管理，按需引入数据库、缓存和 Web 等能力。
+home_boot_link: 阅读 Boot 指南 →
+home_contribute_headline: 从使用者，
+home_contribute_headline_end: 成为共同建设者。
+home_contribute_intro: 在项目仓库反馈问题、改进模板或补充使用文档。每个项目都有独立的源码和问题反馈入口。
+home_contribute_link: 参与 Lodsve →
+home_find_project: 找到适合的项目与文档
+home_report_issue: 提供环境信息与复现步骤
+home_improve_docs: 通过 Pull Request 改进文档 ↗

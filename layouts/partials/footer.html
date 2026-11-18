@@ -1,8 +1,8 @@
 <footer class="site-footer">
   <div class="footer-inner">
-    <div class="footer-brand"><a href="{{ "/" | relURL }}" aria-label="Lodsve 首页"><img class="footer-logo" src="{{ "/images/lodsve-footer-logo.png" | relURL }}" alt="Lodsve" width="640" height="399" loading="lazy"></a><p>让 Java 工程的起步、开发与构建<br>更容易复用。</p><span>由 Lodsve 开源社区维护</span></div>
-    <div class="footer-group"><strong>开源项目</strong>{{ with .Site.GetPage "/projects" }}{{ range .Pages.ByWeight }}<a href="{{ .RelPermalink }}">{{ .Params.shortTitle | default .Title }}</a>{{ end }}{{ end }}</div>
-    <div class="footer-group"><strong>文档资源</strong><a href="{{ "/docs/" | relURL }}">文档中心</a><a href="{{ "/guides/" | relURL }}">使用指南</a><a href="{{ "/examples/" | relURL }}">Boot 示例工程</a><a href="{{ "/reference/configuration/" | relURL }}">Boot 配置参考</a></div>
-    <div class="footer-group"><strong>参与社区</strong><a href="{{ .Site.Params.repository }}">GitHub 组织 ↗</a><a href="{{ .Site.Params.docsRepository }}">文档源码 ↗</a><a href="{{ "/community/" | relURL }}">反馈与贡献</a></div>
+    <div class="footer-brand"><a href="{{ .Site.Home.RelPermalink }}" aria-label="{{ T "home" }}"><img class="footer-logo" src="{{ "/images/lodsve-footer-logo.png" | relURL }}" alt="Lodsve" width="640" height="399" loading="lazy"></a><p>{{ T "footer_description" }}</p><span>{{ T "footer_maintainer" }}</span></div>
+    <div class="footer-group"><strong>{{ T "footer_projects" }}</strong>{{ with .Site.GetPage "/projects" }}{{ range .Pages.ByWeight }}<a href="{{ .RelPermalink }}">{{ .Params.shortTitle | default .Title }}</a>{{ end }}{{ end }}</div>
+    <div class="footer-group"><strong>{{ T "footer_resources" }}</strong><a href="{{ "docs/" | relLangURL }}">{{ T "doc_center" }}</a><a href="{{ "guides/" | relLangURL }}">{{ T "user_guides" }}</a><a href="{{ "examples/" | relLangURL }}">{{ T "footer_examples" }}</a><a href="{{ "reference/configuration/" | relLangURL }}">{{ T "footer_configuration" }}</a></div>
+    <div class="footer-group"><strong>{{ T "footer_community" }}</strong><a href="{{ .Site.Params.repository }}">{{ T "footer_github" }}</a><a href="{{ .Site.Params.docsRepository }}">{{ T "footer_source" }}</a><a href="{{ "community/" | relLangURL }}">{{ T "footer_contribute" }}</a></div>
   </div>
 </footer>

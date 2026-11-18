@@ -1,0 +1,11 @@
+<aside class="docs-sidebar">
+  <button class="doc-nav-toggle nav-toggle" type="button" data-nav-toggle aria-controls="doc-nav" aria-expanded="false">{{ T "doc_nav" }}</button>
+  <div id="doc-nav">
+    {{ if and (eq .Section "projects") .IsSection }}
+    <a class="back-home" href="{{ "projects/" | relLangURL }}">{{ T "all_projects" }}</a>
+    {{ else }}
+    <a class="back-home" href="{{ .Site.Home.RelPermalink }}">{{ T "back_home" }}</a>
+    {{ end }}
+    {{ partial "sidebar.html" . }}
+  </div>
+</aside>

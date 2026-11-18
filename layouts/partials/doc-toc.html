@@ -1,1 +1,10 @@
-<aside class="doc-toc" aria-label="本页目录"><div class="toc-sticky">{{ if .Fragments.Headings }}<strong>本页目录</strong>{{ .TableOfContents }}{{ end }}{{ with partial "project-context.html" . }}{{ with .Params.repository }}<a class="source-link" href="{{ . }}">项目源码 ↗</a>{{ end }}{{ end }}{{ with .File }}<a class="source-link" href="{{ printf "%s/edit/master/content/%s" $.Site.Params.docsRepository .Path }}">编辑此页 ↗</a>{{ end }}</div></aside>
+{{ $label := T "page_links" }}
+{{ if .Fragments.Headings }}{{ $label = T "contents" }}{{ end }}
+<aside class="doc-toc" aria-label="{{ $label }}">
+  <button class="doc-nav-toggle nav-toggle" type="button" data-nav-toggle aria-controls="doc-toc-links" aria-expanded="false">{{ $label }}</button>
+  <div id="doc-toc-links" class="toc-sticky">
+    {{ if .Fragments.Headings }}<strong>{{ T "contents" }}</strong>{{ .TableOfContents }}{{ end }}
+    {{ with partial "project-context.html" . }}{{ with .Params.repository }}<a class="source-link" href="{{ . }}">{{ T "project_source" }}</a>{{ end }}{{ end }}
+    {{ with .File }}<a class="source-link" href="{{ printf "%s/edit/master/content/%s" $.Site.Params.docsRepository .Path }}">{{ T "edit_page" }}</a>{{ end }}
+  </div>
+</aside>
