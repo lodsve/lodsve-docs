@@ -7,7 +7,10 @@
         {{ if ne .Language.Lang $.Language.Lang }}
           {{ $target := .Home }}
           {{ range where $.Translations "Language.Lang" .Language.Lang }}{{ $target = . }}{{ end }}
-          <a class="header-link language-switch" href="{{ $target.RelPermalink }}" hreflang="{{ .Language.Locale }}" aria-label="{{ T "switch_language" }} ({{ .Language.Label }})"><span lang="{{ .Language.Locale }}">{{ .Language.Label }}</span></a>
+          <a class="header-link language-switch" href="{{ $target.RelPermalink }}" hreflang="{{ .Language.Locale }}" aria-label="{{ T "switch_language" }} ({{ .Language.Label }})">
+            {{ with .Params.flag }}<img class="language-flag" src="{{ . | relURL }}" alt="" width="20" height="14">{{ end }}
+            <span lang="{{ .Language.Locale }}">{{ .Language.Label }}</span>
+          </a>
         {{ end }}
       {{ end }}
       <button class="header-link nav-toggle" type="button" data-nav-toggle aria-controls="main-nav" aria-expanded="false">{{ T "navigation_toggle" }}</button>

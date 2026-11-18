@@ -144,6 +144,12 @@ summary:focus-visible {
   transition: background-color .18s ease, border-color .18s ease, color .18s ease;
 }
 
+.language-flag {
+  display: block;
+  flex: none;
+  object-fit: contain;
+}
+
 .header-actions {
   order: 2;
   display: flex;
@@ -628,6 +634,12 @@ summary:focus-visible {
 
   .hero-inner {
     gap: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-nav a {
+    padding-inline: 8px;
   }
 }
 
