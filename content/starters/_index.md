@@ -9,7 +9,7 @@ Starter 是应用集成 Lodsve Boot 的推荐入口。选择一个 Starter 后�
 | Starter | 适用场景 |
 | --- | --- |
 | filesystem | OSS、S3、Minio 等文件上传下载 |
-| mongodb | Spring Data MongoDB 和具名多数据源切换 |
+| [mongodb](/starters/mongodb/) | Spring Data MongoDB 和具名多数据源切换 |
 | mybatis | 通用 CRUD、分页、逻辑删除和乐观锁 |
 | redis | Redis 连接、序列化和动态数据源 |
 | rdbms | 动态数据源和 Druid 整合 |

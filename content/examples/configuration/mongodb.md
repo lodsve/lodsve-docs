@@ -12,6 +12,8 @@ spring:
   mongodb:
     # 默认数据源；生产环境请从环境变量或密钥服务注入完整 URI。
     uri: ${MONGODB_URI:mongodb://localhost:27017/lodsve}
+    # 可单独指定默认库名；设置后优先于 URI 中的数据库名。
+    # database: ${MONGODB_DATABASE:lodsve}
   data:
     mongodb:
       # 是否在启动时自动创建实体索引；此项属于 Spring Data MongoDB。
@@ -27,6 +29,6 @@ lodsve:
         uri: ${MONGODB_ARCHIVE_URI:mongodb://localhost:27017/lodsve_archive}
 ```
 
-只使用一个 MongoDB 时，可省略整个 `lodsve.mongo` 配置。URI 可包含认证信息、Replica Set、TLS 和连接池等标准 MongoDB URI 选项；URI 语法由 MongoDB Java Driver 解析。
+只使用一个 MongoDB 时，可省略整个 `lodsve.mongo` 配置。默认库名可由 `spring.mongodb.database` 单独指定；每个具名数据源的 URI 则必须包含数据库名。URI 可包含认证信息、Replica Set、TLS 和连接池等标准 MongoDB URI 选项；URI 语法由 MongoDB Java Driver 解析。
 
 在 Service 的 Spring Bean 方法上添加 `@SwitchMongoDataSource("archive")` 可切换到 `archive`。该方法需要经由 Spring 代理调用；事务或 `ClientSession` 应在同一个数据源上完成。完整组件行为见[MongoDB Component](/components/mongodb/)及[MongoDB Starter](/starters/mongodb/)。
