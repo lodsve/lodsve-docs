@@ -10,13 +10,13 @@ weight: 40
 
 | 示例 | 位置 | 依赖服务 |
 | --- | --- | --- |
-| Filesystem | `lodsve-boot-example-filesystem` | OSS、S3 或 Minio |
+| [Filesystem](/examples/filesystem/) | `lodsve-boot-example-filesystem` | OSS、S3 或 Minio |
 | [MongoDB](/examples/configuration/mongodb/) | `lodsve-boot-example-mongodb` | MongoDB；默认库与 archive 具名数据源 |
-| MyBatis | `lodsve-boot-example-mybatis` | MySQL 等关系型数据库 |
-| Redis | `lodsve-boot-example-redis` | Redis |
-| RabbitMQ | `lodsve-boot-example-rabbitmq` | RabbitMQ |
-| RocketMQ | `lodsve-boot-example-rocketmq` | RocketMQ NameServer |
-| RPC | `lodsve-boot-example-rpc` | 服务端与客户端 |
-| WebMVC | `lodsve-boot-example-webmvc` | HTTP 服务 |
+| [MyBatis](/examples/mybatis/) | `lodsve-boot-example-mybatis` | MySQL 等关系型数据库 |
+| [Redis](/examples/configuration/redis/) | `lodsve-boot-example-redis` | Redis |
+| [RabbitMQ](/examples/configuration/rabbitmq/) | `lodsve-boot-example-rabbitmq` | RabbitMQ |
+| [RocketMQ](/examples/configuration/rocketmq/) | `lodsve-boot-example-rocketmq` | RocketMQ NameServer |
+| [RPC](/examples/rpc/) | `lodsve-boot-example-rpc` | 服务端与客户端 |
+| [WebMVC](/examples/configuration/webmvc/) | `lodsve-boot-example-webmvc` | HTTP 服务 |
 
 运行示例前先阅读对应模块的 `application.yml`，将连接地址、凭据和 Topic 等环境参数改为本地值。
