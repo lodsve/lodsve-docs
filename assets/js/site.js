@@ -11,6 +11,33 @@ document.querySelectorAll("[data-nav-toggle]").forEach((button) => {
 document.documentElement.classList.add("nav-ready");
 
 (() => {
+  const switchers = document.querySelectorAll("[data-language-switch]");
+  if (!switchers.length) return;
+
+  function closeSwitchers(except) {
+    switchers.forEach((switcher) => {
+      if (switcher !== except) switcher.open = false;
+    });
+  }
+
+  switchers.forEach((switcher) => {
+    switcher.addEventListener("toggle", () => {
+      if (switcher.open) closeSwitchers(switcher);
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    switchers.forEach((switcher) => {
+      if (switcher.open && !switcher.contains(event.target)) switcher.open = false;
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeSwitchers();
+  });
+})();
+
+(() => {
   const triggers = document.querySelectorAll("[data-architecture-image]");
   const viewer = document.querySelector("[data-architecture-viewer]");
 

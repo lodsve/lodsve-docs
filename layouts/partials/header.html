@@ -6,16 +6,31 @@
         <img src="{{ "/images/github-mark.png" | relURL }}" alt="" width="16" height="16">
         <span>GitHub ↗</span>
       </a>
-      {{ range hugo.Sites }}
-        {{ if ne .Language.Lang $.Language.Lang }}
-          {{ $target := .Home }}
-          {{ range where $.Translations "Language.Lang" .Language.Lang }}{{ $target = . }}{{ end }}
-          <a class="header-link language-switch" href="{{ $target.RelPermalink }}" hreflang="{{ .Language.Locale }}" aria-label="{{ T "switch_language" }} ({{ .Language.Label }})">
-            {{ with .Params.flag }}<img class="language-flag" src="{{ . | relURL }}" alt="" width="20" height="14">{{ end }}
-            <span lang="{{ .Language.Locale }}">{{ .Language.Label }}</span>
-          </a>
-        {{ end }}
-      {{ end }}
+      <details class="language-switch" data-language-switch>
+        <summary class="header-link language-switch__current" aria-label="{{ T "switch_language" }} ({{ .Language.Label }})">
+          {{ with .Language.Params.flag }}<img class="language-flag" src="{{ . | relURL }}" alt="" width="20" height="14">{{ end }}
+          <span lang="{{ .Language.Locale }}">{{ .Language.Label }}</span>
+        </summary>
+        <ul class="language-switch__menu" aria-label="{{ T "switch_language" }}">
+          {{ range hugo.Sites }}
+            {{ $lang := .Language }}
+            {{ $isCurrent := eq $lang.Lang $.Language.Lang }}
+            {{ $target := .Home }}
+            {{ if $isCurrent }}
+              {{ $target = $ }}
+            {{ else }}
+              {{ range where $.Translations "Language.Lang" $lang.Lang }}{{ $target = . }}{{ end }}
+            {{ end }}
+            <li>
+              <a class="language-switch__option{{ if $isCurrent }} is-current{{ end }}" href="{{ $target.RelPermalink }}" hreflang="{{ $lang.Locale }}" lang="{{ $lang.Locale }}"{{ if $isCurrent }} aria-current="true"{{ end }}>
+                {{ with $lang.Params.flag }}<img class="language-flag" src="{{ . | relURL }}" alt="" width="20" height="14">{{ end }}
+                <span>{{ $lang.Label }}</span>
+                {{ if $isCurrent }}<span class="language-switch__check" aria-hidden="true">✓</span>{{ end }}
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      </details>
       <button class="header-link nav-toggle" type="button" data-nav-toggle aria-controls="main-nav" aria-expanded="false">{{ T "navigation_toggle" }}</button>
     </div>
     <nav id="main-nav" class="main-nav" aria-label="{{ T "navigation" }}">
